@@ -1,0 +1,14 @@
+<html><head><title>Dashboard</title></head>
+<body style="background:black;color:cyan;text-align:center;">
+<h2 style="text-shadow:0 0 10px cyan;">E R R O R I O S Panel</h2>
+<form method="post" action="/addkey">
+<input name="key" placeholder="New Key"/>
+<button type="submit">Add Key</button>
+</form>
+<table border="1" style="margin:auto;">
+<tr><th>ID</th><th>Key</th><th>Action</th></tr>
+<% keys.forEach(function(k){ %>
+<tr><td><%= k._id %></td><td><%= k.key %></td><td><a href="/del/<%= k._id %>">Delete</a></td></tr>
+<% }); %>
+</table>
+</body></html>
